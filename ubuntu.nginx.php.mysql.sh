@@ -22,4 +22,6 @@ mysql <<<"alter user 'root'@'localhost' identified with mysql_native_password by
 
 add-apt-repository universe
 
+apt install php-fpm php-mysql -y
+
 sysctl -w net.core.somaxconn=4096

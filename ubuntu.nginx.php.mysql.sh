@@ -8,6 +8,8 @@
 apt update
 apt upgrade -y
 
+apt install zip unzip -y
+
 apt install nginx -y
 
 ufw allow "Nginx Full"

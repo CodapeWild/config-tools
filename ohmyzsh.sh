@@ -1,7 +1,5 @@
 #! /bin/bash
 
-# ubuntu: 20.04
-
 set -e
 
 apt update

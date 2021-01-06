@@ -1,8 +1,5 @@
 #! /bin/bash
 
-# ubuntu: 20.04
-# letsencrypt:
-
 apt update
 apt upgrade -y
 

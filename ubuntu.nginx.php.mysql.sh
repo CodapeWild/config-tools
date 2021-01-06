@@ -1,10 +1,5 @@
 #! /bin/bash
 
-# ubuntu: 20.04
-# nginx:
-# php:
-# mysql:
-
 apt update
 apt upgrade -y
 

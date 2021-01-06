@@ -3,7 +3,7 @@
 set -e
 
 apt update
-apt install python-software-properties
+apt install software-properties-common
 add-apt-repository -y ppa:ondrej/php
 apt update
 apt upgrade -y

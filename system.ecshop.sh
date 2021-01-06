@@ -10,7 +10,7 @@ apt upgrade -y
 
 apt install nginx -y
 apt install mysql-server -y
-apt install php5.6-fmp php5.6-common php5.6-mysql php5.6-gd -y
+apt install php5.6-fpm php5.6-common php5.6-mysql php5.6-gd -y
 
 read -sp "set root@localhost password for mysql":pswd
 mysql <<<"alter user 'root'@'localhost' identified with mysql_native_password by '${pswd}';flush privileges;select user,host,authentication_string,plugin from mysql.user where user='root';"

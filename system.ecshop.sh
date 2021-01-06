@@ -3,7 +3,7 @@
 set -e
 
 apt update
-apt install software-properties-common
+apt install software-properties-common -y
 add-apt-repository -y ppa:ondrej/php
 apt update
 apt upgrade -y

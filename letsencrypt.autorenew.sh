@@ -5,4 +5,4 @@ apt upgrade -y
 
 add-apt-repository ppa:certbot/certbot
 
-apt install python-certbot-nginx
+apt install python-certbot-nginx -y

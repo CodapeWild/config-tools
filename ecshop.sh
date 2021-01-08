@@ -1,4 +1,5 @@
 #! /bin/bash
+# ubuntu system config for ecshop
 
 set -e
 

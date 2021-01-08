@@ -1,4 +1,5 @@
 #! /bin/bash
+# oh-my-zsh config for ubuntu system
 
 set -e
 

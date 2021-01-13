@@ -32,3 +32,7 @@ npm install ghost-cli@latest -g
 mkdir -p /var/www/ghost
 chown ${newuser}:${newuser} /var/www/ghost
 chmod -R 755 /var/www/ghost
+
+su $newuser
+cd /var/www/ghost
+ghost install

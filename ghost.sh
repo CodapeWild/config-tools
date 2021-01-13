@@ -13,8 +13,9 @@ useradd -ms /bin/bash $newuser
 usermod -aG sudo $newuser
 
 apt install mysql-server -y
+read -p "set db name for ghost": dbname
 read -sp "set password for ${newuser}@localhost of mysql": pswd
-mysql <<<"create user '${newuser}'@'localhost' identified with mysql_native_password by '${pswd}';flush privileges;select user,host,authentication_string,plugin from mysql.user where user='${newuser}';"
+mysql <<<"create user '${newuser}'@'localhost' identified with mysql_native_password by '${pswd}';grant all privileges on ${dbname}.* to '${newuser}'@'localhost';flush privileges;select user,host,authentication_string,plugin from mysql.user where user='${newuser}';"
 
 ufw allow 'Nginx Full'
 ufw allow ssh

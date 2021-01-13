@@ -1,5 +1,5 @@
 #! /bin/bash
-# ubuntu system config for ecshop
+# ubuntu system prerequisite config for ecshop
 
 set -e
 
@@ -12,7 +12,7 @@ apt upgrade -y
 apt install nginx -y
 
 apt install mysql-server -y
-read -sp "set root@localhost password for mysql": pswd
+read -sp "set password for root@localhost of mysql": pswd
 mysql <<<"alter user 'root'@'localhost' identified with mysql_native_password by '${pswd}';flush privileges;select user,host,authentication_string,plugin from mysql.user where user='root';"
 
 apt install php5.6-fpm php5.6-mysql php5.6-gd -y

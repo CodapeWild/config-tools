@@ -8,9 +8,10 @@ apt upgrade -y
 
 apt install nginx certbot python3-certbot-nginx -y
 
-read -p "add new user for ghost install": newuser
+read -p "add new user for ghost installation": newuser
 useradd -ms /bin/bash $newuser
 usermod -aG sudo $newuser
+passwd $newuser
 
 apt install mysql-server -y
 read -p "set db name for ghost": dbname

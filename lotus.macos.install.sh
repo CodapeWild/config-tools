@@ -49,8 +49,8 @@ make clean && make all # mainnet
 
 # Or to join a testnet or devnet:
 # Calibration with min 32 GiB sectors
-make clean && make calibnet
+# make clean && make calibnet
 # Nerpa with min 512 MiB sectors
-make clean && make nerpanet
+# make clean && make nerpanet
 
-sudo make install
+make install

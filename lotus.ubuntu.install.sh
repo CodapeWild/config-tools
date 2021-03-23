@@ -39,5 +39,5 @@ export CGO_CFLAGS="-D__BLST_PORTABLE__"
 make clean && make all
 
 # Lotus provides generic Systemd service files. They can be installed with
-#make install-daemon-service
-#make install-miner-service
+make install-daemon-service
+make install-miner-service

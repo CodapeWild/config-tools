@@ -13,7 +13,7 @@ apt update
 
 # install system dependences
 export DEBIAN_FRONTEND=noninteractive
-apt install mesa-opencl-icd ocl-icd-opencl-dev gcc git bzr jq pkg-config curl clang build-essential hwloc libhwloc-dev wget -y --fix-broken
+apt install mesa-opencl-icd ocl-icd-opencl-dev gcc git bzr jq pkg-config curl clang build-essential hwloc libhwloc-dev wget -y
 apt upgrade -y
 
 # install rust

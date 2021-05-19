@@ -12,7 +12,8 @@ add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main
 apt update
 
 # install system dependences
-apt install mesa-opencl-icd ocl-icd-opencl-dev gcc git bzr jq pkg-config curl clang build-essential hwloc libhwloc-dev wget -y
+export DEBIAN_FRONTEND=noninteractive
+apt install mesa-opencl-icd ocl-icd-opencl-dev gcc git bzr jq pkg-config curl clang build-essential hwloc libhwloc-dev wget -y --fix-broken
 apt upgrade -y
 
 # install rust
@@ -23,8 +24,9 @@ wget -c https://golang.org/dl/go1.15.5.linux-amd64.tar.gz -O - | sudo tar -xz -C
 echo export PAHT=/usr/local/go/bin:$PATH >>~/.bashrc
 
 # install lotus
+cd ~
 git clone https://github.com/filecoin-project/lotus.git
-cd lotus/
+cd ~/lotus
 git checkout tags/v1.5.1 -b v1.5.1
 
 # ipfs and go gateway proxy in CHINA

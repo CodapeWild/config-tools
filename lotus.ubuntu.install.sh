@@ -13,7 +13,7 @@ apt update
 
 # install system dependences
 export DEBIAN_FRONTEND=noninteractive
-apt install mesa-opencl-icd ocl-icd-opencl-dev gcc git bzr jq pkg-config curl clang build-essential hwloc libhwloc-dev wget -y
+apt install -y mesa-opencl-icd ocl-icd-opencl-dev ntpdate ubuntu-drivers-common gcc git bzr jq pkg-config curl clang build-essential hwloc libhwloc-dev wget
 apt upgrade -y
 
 # install rust
@@ -21,7 +21,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # install golang
 wget -c https://golang.org/dl/go1.15.5.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-echo export PAHT=/usr/local/go/bin:$PATH >>~/.bashrc
+echo export PATH=/usr/local/go/bin:$PATH >>~/.bashrc
 
 # install lotus
 cd ~
@@ -34,7 +34,7 @@ echo export IPFS_GATEWAY=https://proof-parameters.s3.cn-south-1.jdcloud-oss.com/
 echo export GOPROXY=https://goproxy.cn >>~/.bashrc
 
 # If you have an AMD Zen or Intel Ice Lake CPU (or later), enable the use of SHA extensions by adding these two environment variables:
-echo export RUSTFLAGS="-C target-cpu=native -g" >>~/.bashrc
+echo "export RUSTFLAGS='-C target-cpu=native -g'" >>~/.bashrc
 echo export FFI_BUILD_FROM_SOURCE=1 >>~/.bashrc
 
 # Some older Intel and AMD processors without the ADX instruction support may panic with illegal instruction errors. To fix this, add the CGO_CFLAGS environment variable

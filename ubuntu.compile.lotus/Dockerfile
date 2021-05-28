@@ -4,7 +4,6 @@ RUN apt update
 RUN apt upgrade -y
 
 ARG DEBIAN_FRONTEND=noninteractive
-
 RUN apt install -y --no-install-recommends build-essential \
   mesa-opencl-icd \
   ocl-icd-opencl-dev \
